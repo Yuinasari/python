@@ -1,0 +1,7 @@
+def rec(w,l):
+    area = w*w
+    return area
+
+w = int(input("กว้าง :"))
+l = int(input("ยาว :"))
+print ("พื้นที่สี่เหลี่ยม %d " % rec(w,l))

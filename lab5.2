@@ -1,0 +1,26 @@
+def loop(num):
+    x=0
+    for i in range(num):
+        price = int(input("รับราคาสินค้า %d " % (i+1)))
+        x += price
+    return x
+
+def tex(m):
+    vat = m*7/100
+    return vat
+
+def total(s,t,d):
+    tt=(s+t)-d
+    return tt
+
+def dis(money):
+    d= money*5/100
+    return d
+
+
+num = int(input("จำนวนสินค้า"))
+money = loop(num)
+print("ราคารวม %.2f" % money)
+print("ภาษี %.2f" % tex(money))
+print("ส่วนลด %.2f" % dis(money))
+print("รวมทั้งหมด = %.2f "% total(money,tex(money),dis(money)))
